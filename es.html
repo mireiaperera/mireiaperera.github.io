@@ -39,13 +39,14 @@ h1 em{font-style:italic;color:var(--accent)}
 .lede{font-size:18.5px;line-height:1.6;max-width:760px;margin:0 0 16px}
 .lede.first{font-size:20px}
 .cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:28px}
-.herogrid{display:grid;grid-template-columns:1fr 180px;gap:36px;align-items:center;margin-bottom:4px}
+.herogrid{display:grid;grid-template-columns:1fr 220px;gap:36px;align-items:center;margin-bottom:4px}
+.herogrid:not(.top) .polaroid img{aspect-ratio:auto}
 @media(max-width:760px){.herogrid{grid-template-columns:1fr} .herogrid .polaroid{max-width:200px;margin:8px auto 16px}}
 .polaroid{background:#fff;padding:8px 8px 10px;box-shadow:0 8px 28px rgba(23,32,31,.14);transform:rotate(2deg);margin:0}
 .polaroid img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover}
 .polaroid figcaption{font-family:"Lora",Georgia,serif;font-style:italic;font-size:12.5px;color:var(--muted);text-align:center;margin-top:10px}
 .polaroid.small{transform:rotate(-2deg)}
-.herogrid.top{align-items:start}
+.herogrid.top{grid-template-columns:1fr 180px;align-items:start}
 .herogrid.top .polaroid{margin-top:4px}
 .btn{display:inline-block;padding:11px 18px;border-radius:6px;text-decoration:none;font-weight:600;font-size:15px}
 .btn.primary{background:var(--accent);color:#fff}
