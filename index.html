@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mireia Perera-Gonzalez</title>
+<meta name="description" content="Mireia Perera-Gonzalez — MRI scientist turned commercial leader for quantum, photonics and life-science instrumentation. President, Swabian Instruments USA. Paints, plays padel, learning German because why not.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,400..800;1,6..12,400..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#17201f; --muted:#5a6563; --accent:#0f6f67; --accent-dark:#0a504a;
+  --band:#e3efef; --line:#c9dbdb; --paper:#eff5f6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+section,header{scroll-margin-top:64px}
+body{margin:0;font-family:"Nunito Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:17px;line-height:1.6}
+a{color:var(--accent)}
+a:hover{color:var(--accent-dark)}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+
+/* nav */
+nav{position:sticky;top:0;background:rgba(239,245,246,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+nav .brand{font-family:"Lora",Georgia,serif;font-weight:500;font-size:18px;color:var(--ink);text-decoration:none}
+nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0}
+nav li a{text-decoration:none;color:var(--muted);font-size:14px;font-weight:500;letter-spacing:.02em}
+nav li a:hover{color:var(--accent)}
+nav li.lang a{border:1.5px solid var(--line);border-radius:4px;padding:3px 8px;font-size:12px;letter-spacing:.08em}
+@media(max-width:640px){nav ul{gap:12px} nav li a{font-size:13px} nav .brand{font-size:15px}}
+
+/* hero */
+.hero{padding:72px 0 56px;border-bottom:1px solid var(--line)}
+.kicker{color:var(--accent);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:12px;margin:0 0 14px}
+h1{font-family:"Lora",Georgia,serif;font-weight:400;font-size:clamp(34px,4.6vw,48px);line-height:1.05;margin:0 0 22px;letter-spacing:-.01em}
+h1 em{font-style:italic;color:var(--accent)}
+.lede{font-size:18.5px;line-height:1.6;max-width:760px;margin:0 0 16px}
+.lede.first{font-size:20px}
+.cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:28px}
+.herogrid{display:grid;grid-template-columns:1fr 180px;gap:36px;align-items:center;margin-bottom:4px}
+@media(max-width:760px){.herogrid{grid-template-columns:1fr} .herogrid .polaroid{max-width:200px;margin:8px auto 16px}}
+.polaroid{background:#fff;padding:8px 8px 10px;box-shadow:0 8px 28px rgba(23,32,31,.14);transform:rotate(2deg);margin:0}
+.polaroid img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover}
+.polaroid figcaption{font-family:"Lora",Georgia,serif;font-style:italic;font-size:12.5px;color:var(--muted);text-align:center;margin-top:10px}
+.polaroid.small{transform:rotate(-2deg)}
+.herogrid.top{align-items:start}
+.herogrid.top .polaroid{margin-top:4px}
+.btn{display:inline-block;padding:11px 18px;border-radius:6px;text-decoration:none;font-weight:600;font-size:15px}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent-dark)}
+.btn.ghost{border:1.5px solid var(--line);color:var(--ink)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+/* sections */
+section{padding:60px 0;border-bottom:1px solid var(--line)}
+h2{font-family:"Lora",Georgia,serif;font-weight:400;font-size:34px;margin:0 0 8px;letter-spacing:-.01em}
+h3{font-family:"Lora",Georgia,serif;font-weight:500;font-size:21px;margin:34px 0 10px}
+#offclock h3:first-of-type{margin-top:26px}
+.sub{color:var(--muted);margin:0 0 32px;font-size:17px}
+p{margin:0 0 16px}
+
+/* numbered list */
+ol.big{list-style:none;counter-reset:n;padding:0;margin:0}
+ol.big li{counter-increment:n;position:relative;padding-left:56px;margin:0 0 18px;font-size:20px;line-height:1.4}
+ol.big li::before{content:counter(n);position:absolute;left:0;top:-4px;font-family:"Lora",Georgia,serif;font-size:34px;color:var(--accent);font-weight:300;line-height:1}
+ol.big b{font-weight:500;font-family:"Lora",Georgia,serif;font-size:24px}
+
+/* built grid */
+.built{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:8px}
+.built > div{border:1px solid var(--line);border-radius:8px;padding:20px 22px;background:#f8fbfb}
+.built .num{font-family:"Lora",Georgia,serif;font-size:36px;color:var(--accent);line-height:1;margin-bottom:8px}
+.built b{display:block;font-weight:600;font-size:16px;margin-bottom:4px}
+.built span{color:var(--muted);font-size:14px}
+@media(max-width:560px){.built{grid-template-columns:1fr}}
+.aside{color:var(--muted);font-size:15px;margin-top:18px}
+
+/* talks */
+ul.talks{list-style:none;padding:0;margin:0}
+ul.talks li{padding:14px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:110px 1fr;gap:16px}
+ul.talks li:first-child{border-top:0}
+ul.talks .when{color:var(--muted);font-size:14px;padding-top:2px}
+ul.talks .what b{font-weight:600}
+ul.talks .what span{display:block;color:var(--muted);font-size:15px}
+@media(max-width:560px){ul.talks li{grid-template-columns:1fr;gap:4px}}
+.band{background:var(--band);border-left:4px solid var(--accent);padding:16px 22px;border-radius:0 8px 8px 0;margin:24px 0 0;font-size:16px}
+.band p:last-child{margin:0}
+ul.research{padding-left:20px;margin:0}
+ul.research li{margin:0 0 12px}
+ul.research li::marker{color:var(--accent)}
+ul.research b{font-weight:600}
+
+/* off the clock */
+.three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px}
+@media(max-width:760px){.three{grid-template-columns:1fr}}
+.three h3{margin-top:0;font-size:20px}
+.three p{font-size:16px}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 8px}
+.gallery figure{margin:0;cursor:zoom-in;border-radius:6px;overflow:hidden;background:#ddd;aspect-ratio:4/5;position:relative}
+.gallery figure.wide{grid-column:span 2;aspect-ratio:8/5}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.gallery figure:hover img{transform:scale(1.03)}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:10px 12px;font-size:13px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.55));opacity:0;transition:opacity .3s}
+.gallery figure:hover figcaption{opacity:1}
+@media(max-width:640px){.gallery{grid-template-columns:repeat(2,1fr)} .gallery figure.wide{grid-column:span 2}}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(15,20,19,.94);display:none;align-items:center;justify-content:center;z-index:50;padding:24px;cursor:zoom-out}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:88vh;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lb .cap{position:absolute;bottom:22px;left:0;right:0;text-align:center;color:#ddd;font-size:14px}
+
+/* contact */
+.contact{padding:64px 0 40px;border-bottom:0}
+.contact .row{display:flex;gap:28px;flex-wrap:wrap;margin-top:18px;font-size:16px}
+.contact .row a{text-decoration:none;font-weight:500;border-bottom:1.5px solid var(--line);padding-bottom:2px}
+.contact .row a:hover{border-color:var(--accent)}
+footer{color:var(--muted);font-size:13px;padding:0 0 40px}
+.form{margin-top:22px;max-width:620px}
+.form label{display:block;font-size:14px;font-weight:600;color:var(--muted);margin-bottom:14px}
+.form input[type=text],.form input[type=email],.form textarea{display:block;width:100%;margin-top:6px;padding:10px 12px;border:1.5px solid var(--line);border-radius:6px;background:#f8fbfb;font:inherit;font-size:16px;color:var(--ink)}
+.form input:focus,.form textarea:focus{outline:none;border-color:var(--accent)}
+.form .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:560px){.form .row2{grid-template-columns:1fr}}
+.form .check{display:flex;align-items:center;gap:8px;font-weight:500;color:var(--ink)}
+.form .check input{accent-color:var(--accent);width:16px;height:16px}
+.form button{border:0;cursor:pointer;font:inherit;font-weight:600;margin-top:4px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Mireia Perera-Gonzalez</a>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#science">Science</a></li>
+      <li><a href="#offclock">Off the clock</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="lang"><a href="es.html" lang="es" title="Versión en español">ES</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="kicker">Boston, MA · Quantum · Photonics · Life science</p>
+    <h1>Scientist by training.<br>Commercial leader <em>by choice.</em></h1>
+    <div class="herogrid">
+    <div>
+    <p class="lede first">When I was a kid I wanted to be a medical doctor, white coat included. Then I fell in love with numbers, and was drawn to a discipline that would combine both: biomedical engineering. I did my bachelor's in Spain, wrote an undergraduate thesis on deep learning for early diagnosis from medical images, and then spent about a year in Vienna learning about cardiac MRI.</p>
+    </div>
+    <figure class="polaroid">
+      <img src="photo-doctor.jpg" alt="Mireia as a small child in a doctor's gown, holding a notebook and smiling">
+      <figcaption>The medical kind. Early rounds.</figcaption>
+    </figure>
+    </div>
+    <p class="lede">I learned that Boston was the home of biotech and decided to pursue a PhD at Northeastern and become an MRI scientist. That is where, indirectly, I started building my foundation in quantum mechanics. An MRI is billions of nuclear spins brought into coherence, and then a careful characterization of how they relax.</p>
+    <p class="lede">I then joined Swabian Instruments, and have since been applying the physics I learned to a much wider world of applications: entangled photons, single-molecule fluorescence, and quantum experiments of every kind.</p>
+    <div class="cta">
+      <a class="btn primary" href="#contact">Get in touch</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/mireiapereragonzalez" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</header>
+
+<section id="short">
+  <div class="wrap">
+    <h2>How I work</h2>
+    <ol style="margin-top:22px" class="big">
+      <li><b>If there is no structure, I will build one.</b></li>
+      <li><b>People are the actual product.</b></li>
+      <li><b>I would rather learn it than be told it.</b></li>
+    </ol>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <h2>Things I've built</h2>
+    <div class="built" style="margin-top:26px">
+      <div><div class="num">1.7×</div><b>Swabian Instruments Americas revenue in two years</b></div>
+      <div><div class="num">9</div><b>Team members globally (Germany, US)</b></div>
+      <div><div class="num">First PO</div><b>For a particle-size analyzer before the product officially existed</b><span>In a market we are new to</span></div>
+      <div><div class="num">1, 2, 3…</div><b>Photons, resolved with superconducting and room-temperature detectors paired with our Time Tagger</b><span>One of the latest works I have been presenting at optics conferences</span></div>
+    </div>
+    <p class="aside">The full numbers are on my résumé. I find the stories are better in person.</p>
+  </div>
+</section>
+
+<section id="science">
+  <div class="wrap">
+    <h2>Science &amp; academic life</h2>
+
+    <div class="band" style="margin:26px 0 30px"><p>Here is my (not so active) <a href="GOOGLE_SCHOLAR_URL" target="_blank" rel="noopener">Google Scholar</a>.</p></div>
+
+    <h3 style="margin-top:0">Research</h3>
+    <ul class="research">
+      <li><b>Universidad Carlos III de Madrid, Spain.</b> Undergraduate thesis applying deep learning to biomedical images for early detection of kidney disease.</li>
+      <li><b>Medical University of Vienna, Austria.</b> Cardiac MRI: I worked on streamlining workflows for cardiac image analysis.</li>
+      <li><b>Northeastern University, Boston, USA.</b> PhD specialising in quantitative MRI acquisition schemes, with applications in cardiopulmonary, brain and kidney studies, and the use of contrast agents for signal enhancement.</li>
+    </ul>
+
+    <p style="margin-top:22px">These days I love to stay involved with the science. I am always eager to discuss collaborations, whether with detector partners, academic groups, or internally at Swabian Instruments. Getting hands-on has always been my favourite way to learn.</p>
+
+    <h3>Highlighted talks</h3>
+    <ul class="talks">
+      <li><div class="when">Nov 2026</div><div class="what"><b><a href="TALK_OLA_2026_URL" target="_blank" rel="noopener">Photon-number resolution with SNSPDs and time taggers</a></b><span>Optics in Latin America · a year of PNR results, recapped</span></div></li>
+      <li><div class="when">2026</div><div class="what"><b><a href="ABSTRACTS_2026_URL" target="_blank" rel="noopener">Joint PNR abstracts with a superconducting-detector partner</a></b><span>SPIE Defense + Commercial Sensing · CLEO · Frontiers in Optics + Laser Science</span></div></li>
+      <li><div class="when">Oct 2025</div><div class="what"><b><a href="TALK_FIO_2025_URL" target="_blank" rel="noopener">Photon-number-resolved multiphoton microscopy</a></b><span>Frontiers in Optics 2025, with the Colorado School of Mines</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<section id="offclock">
+  <div class="wrap">
+    <h2>Off the clock</h2>
+
+    <h3>Creative</h3>
+    <p>I paint, nowadays in acrylic. Less than I would like to, bandwidth being what it is, but I love the process: choosing colours, laying down layers until you get the outcome you expected, or not. I love to create.</p>
+
+    <div class="gallery">
+      <figure class="wide" data-cap="Four geese, dressed for an occasion. Acrylic on canvas.">
+        <img src="painting-geese.jpg" alt="Painting of four geese in costume: one as a ninja turtle, one in a lei and grass skirt, one in a top hat and monocle, one as a cowboy" loading="lazy">
+        <figcaption>Four geese, dressed for an occasion</figcaption>
+      </figure>
+      <figure data-cap="Splash. Acrylic on canvas.">
+        <img src="painting-martini.jpg" alt="Painting of a martini glass with an orange slice splashing into it, on a black background" loading="lazy">
+        <figcaption>Splash</figcaption>
+      </figure>
+      <figure data-cap="Bloom I. Acrylic on canvas.">
+        <img src="painting-bloom-large.jpg" alt="Painting of a woman in a white dress whose head is replaced by large white peonies, on a blue background" loading="lazy">
+        <figcaption>Bloom I</figcaption>
+      </figure>
+      <figure data-cap="Bloom II. Acrylic on canvas.">
+        <img src="painting-bloom-teal.jpg" alt="Painting of a woman leaning backward into a cluster of white flowers, on a teal background" loading="lazy">
+        <figcaption>Bloom II</figcaption>
+      </figure>
+      <figure data-cap="Golden hour. Acrylic on canvas.">
+        <img src="painting-hoop.jpg" alt="Painting of a basketball hoop and palm trees silhouetted against an orange and teal sunset" loading="lazy">
+        <figcaption>Golden hour</figcaption>
+      </figure>
+    </div>
+
+    <h3>Languages</h3>
+    <p>I grew up in a Catalan-speaking region of Spain, so Catalan and Spanish came free. English I worked at, and believed I was fluent in, until I moved to the US and was shown otherwise. Italian is my joy: I am ecstatic every time I get through a whole conversation without unconsciously slipping into "itañol". My latest project is German. <em>Warum nicht?</em></p>
+
+    <h3>Physical</h3>
+    <div class="herogrid top">
+      <div>
+        <p>Sports, preferably team sports, and outdoors whenever Boston permits it. I grew up playing basketball, though my height does not have much to show for it. Padel is my favourite racket sport, but New England is not known for its abundance of padel courts, so I have also been playing tennis, squash and pickleball. In winter I snowboard, and I am eager to learn to ski as well.</p>
+      </div>
+      <figure class="polaroid small">
+        <img src="photo-basketball.jpg" alt="Mireia as a toddler on a yellow toy scooter, grinning and holding a small basketball">
+        <figcaption>Point guard, pre-season.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Say hello</h2>
+    <p>If you are building something that measures what nobody else can, want to argue about pipeline design, or have a strong opinion about whether the geese are overdressed, leave me your email and I will get back to you. Or find me on <a href="https://www.linkedin.com/in/mireiapereragonzalez" target="_blank" rel="noopener">LinkedIn</a>.</p>
+    <form class="form" action="https://formspree.io/f/FORMSPREE_ID" method="POST">
+      <div class="row2">
+        <label>Name<input type="text" name="name" required autocomplete="name"></label>
+        <label>Email<input type="email" name="email" required autocomplete="email"></label>
+      </div>
+      <label>Message<textarea name="message" rows="4" placeholder="Optional"></textarea></label>
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_subject" value="New message from your website">
+      <button type="submit" class="btn primary">Send</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> Mireia Perera-Gonzalez · All paintings are mine, for better or worse.</div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Enlarged painting">
+  <img id="lbimg" src="" alt="">
+  <div class="cap" id="lbcap"></div>
+</div>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+const lb = document.getElementById('lb'), lbimg = document.getElementById('lbimg'), lbcap = document.getElementById('lbcap');
+document.querySelectorAll('.gallery figure').forEach(f => {
+  f.addEventListener('click', () => {
+    const img = f.querySelector('img');
+    lbimg.src = img.src; lbimg.alt = img.alt; lbcap.textContent = f.dataset.cap || '';
+    lb.classList.add('on'); document.body.style.overflow = 'hidden';
+  });
+});
+function closeLb(){ lb.classList.remove('on'); document.body.style.overflow = ''; }
+lb.addEventListener('click', closeLb);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+</script>
+</body>
+</html>
